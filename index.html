@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Raleway&family=Sora:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Weather Forecast</title>
+</head>
+
+<body>
+  <section class="content">
+  <div class="alert sora-font alert-css alert-dismissible fade show">
+  <button type="button" class="btn-close button-css" data-bs-dismiss="alert"></button>
+  By Default Displays The Weather Forecast Of Current Location 
+</div>
+  <div class="container-fluid heading-css text-center p-4">
+    <h1 class="display-3 sora-font">Weather Forecast</h1>
+  </div>
+    <div class="container mt-3 w-75">
+      <div class="row">
+        <div class="col mx-auto py-4">
+          <div class="input-group mb-4 mt-3 mx-auto w-75">
+            <input type="text" class="form-control search-css sora-font " autofocus placeholder="Enter Location" />
+            <button id="searchByCityName" class="btn search-button-1-css" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+            <button title="Current Location's weather" id="searchByCurrentLocation" class="btn search-button-2-css"
+              type="submit">
+              <i class="fas fa-search-location"></i>
+            </button>
+          </div>
+          <p style="text-align: center" class="error-css" id="errorMsg"></p>
+          <!--error Msg-->
+          <div class="conatiner forecast rounded-3  mt-3 text-center p-3">
+            <h1 class="display-5">
+              <i class="fas fa-map-marker-alt forecast-css"></i>
+              <p class="sora-font forecast-css" id="locationName"></p>
+              <div class ="mt-2">
+                <h1 class="sora-font forecast-css" id="Temperature" class="display-4"></h1>
+                <img id="Weathericon" src="" alt="" />
+              </div>
+              <h1 id="description" class="display-5 sora-font forecast-css"></h1>
+          </div>
+          <div class="container details forecast rounded-3 details-css mt-4">
+            <div class="row p-3 text-center">
+              <div class="col-sm">
+                <p id="humidity" class="raleway-font"></p>
+              </div>
+              <div class="col-sm">
+                <p id="visibility" class="raleway-font"></p>
+              </div>
+            </div>
+            <div class="row p-3 text-center">
+              <div class="col-sm">
+                <p id="pressure" class="raleway-font"></p>
+              </div>
+              <div class="col-sm">
+                <p id="speed" class="raleway-font"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about raleway-font">
+    <div class="container  mt-5 text-center">
+      <p>This web page fetchs weather forecast from <a class="links" href="https://openweathermap.org/" target="_blank">OpenWeather API</a>  </p>
+      <p>Made with Html,Css,JavaScript,Bootstrap</p>
+      <p>Created by Sushmitha Vatluri</p>
+    </div>
+  </section>
+  <footer>
+    <div class="container-fluid heading-css mt-5 footer-css display-6 text-center p-3">
+      <div class="row">
+        <div class="col">
+          <a href="https://mailto:sushmithavatluri02@gmail.com" target="_blank"><i class="fas footer-links fa-envelope"></i></a>
+        </div>
+        <div class="col">
+          <i title="9182666724" class="fas fa-phone-square-alt"></i>
+        </div>
+        <div class="col">
+          <!-- TODO change github url -->
+          <a href="https://github.com/Harsha2306/weather-app.git" target="_blank"><i class=" footer-links fab fa-github"></i></a>
+        </div>
+        <div class="col">
+          <a href="https://www.linkedin.com/in/sushmitha-vatluri" target="_blank"><i class="fab footer-links fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="copyright mt-3">&#169 2022 Sushmitha Vatluri</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
